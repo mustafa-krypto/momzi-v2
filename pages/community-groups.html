@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Groups - MumsMatter</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/community-groups.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>MumsMatter</span>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="community-groups.html">Community</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Community Groups</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="community-hero">
+        <div class="hero-content">
+            <h1>Our Thriving Community</h1>
+            <p class="hero-subtitle">Join thousands of mothers in interest-based groups. Find your tribe, share your story, and grow together.</p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search communities..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Filter by Category:</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Groups</button>
+                    <button class="filter-btn" data-filter="career">Career</button>
+                    <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                    <button class="filter-btn" data-filter="wellness">Wellness</button>
+                    <button class="filter-btn" data-filter="learning">Learning</button>
+                </div>
+            </div>
+            <div class="sort-group">
+                <label>Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                    <option value="members">Most Members</option>
+                    <option value="recent">Most Recent</option>
+                    <option value="active">Most Active</option>
+                    <option value="name">Alphabetical</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Groups Grid -->
+    <section class="groups-section">
+        <div class="groups-container">
+            <!-- Career & Growth -->
+            <a href="career-growth.html" class="group-card-link">
+                <div class="group-card" data-category="career" data-members="2400" data-svg="career-growth">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <div class="group-badge-container">
+                            <span class="group-badge">Career</span>
+                        </div>
+                        <h3>Career & Growth</h3>
+                        <p class="group-description">Job postings, career mentorship, and opportunities tailored for mothers looking to advance professionally.</p>
+                        <div class="group-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                2.4K members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-comments"></i>
+                                1.2K posts
+                            </span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">Jobs</span>
+                            <span class="tag">Mentorship</span>
+                            <span class="tag">Entrepreneurship</span>
+                        </div>
+                    </div>
+                    <div class="group-footer">
+                        <button class="btn btn-secondary-small">Join Group</button>
+                        <button class="btn btn-outline-small">Learn More</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Home & Family -->
+            <a href="home-family.html" class="group-card-link">
+                <div class="group-card" data-category="lifestyle" data-members="5100" data-svg="home-family">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <div class="group-badge-container">
+                            <span class="group-badge">Lifestyle</span>
+                        </div>
+                        <h3>Home & Family</h3>
+                        <p class="group-description">Parenting tips, household management, family bonding activities, and real-life stories from mothers.</p>
+                        <div class="group-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                3.8K members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-comments"></i>
+                                2.1K posts
+                            </span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">Parenting</span>
+                            <span class="tag">Family</span>
+                            <span class="tag">Home Tips</span>
+                        </div>
+                    </div>
+                    <div class="group-footer">
+                        <button class="btn btn-secondary-small">Join Group</button>
+                        <button class="btn btn-outline-small">Learn More</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Health & Wellness -->
+            <a href="health-wellness.html" class="group-card-link">
+                <div class="group-card" data-category="wellness" data-members="3800" data-svg="health-wellness">
+                    <div class="group-header">
+                        <div class="group-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                    </div>
+                    <div class="group-body">
+                        <div class="group-badge-container">
+                            <span class="group-badge">Wellness</span>
+                        </div>
+                        <h3>Health & Wellness</h3>
+                        <p class="group-description">Fitness routines, mental health support, nutrition tips, and self-care strategies for busy mothers.</p>
+                        <div class="group-stats">
+                            <span class="stat">
+                                <i class="fas fa-users"></i>
+                                2.9K members
+                            </span>
+                            <span class="stat">
+                                <i class="fas fa-comments"></i>
+                                1.8K posts
+                            </span>
+                        </div>
+                        <div class="group-tags">
+                            <span class="tag">Fitness</span>
+                            <span class="tag">Mental Health</span>
+                            <span class="tag">Nutrition</span>
+                        </div>
+                    </div>
+                    <div class="group-footer">
+                        <button class="btn btn-secondary-small">Join Group</button>
+                        <button class="btn btn-outline-small">Learn More</button>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Learning & Skills -->
+            <div class="group-card" data-category="learning" data-members="1900" data-svg="learning-skills">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Learning</span>
+                    </div>
+                    <h3>Learning & Skills</h3>
+                    <p class="group-description">Vocational training, continuous education programs, and skill development tailored for mothers.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            1.9K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            890 posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Courses</span>
+                        <span class="tag">Skills</span>
+                        <span class="tag">Certifications</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Self Care & Me Time -->
+            <div class="group-card" data-category="wellness" data-members="4200" data-svg="selfcare-metime">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Wellness</span>
+                    </div>
+                    <h3>Self Care & Me Time</h3>
+                    <p class="group-description">Tips, ideas, and encouragement to prioritize yourself. Because taking care of you matters too.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            4.2K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            2.9K posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Self-Care</span>
+                        <span class="tag">Relaxation</span>
+                        <span class="tag">Me Time</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Meetups & Events -->
+            <div class="group-card" data-category="lifestyle" data-members="1600" data-svg="meetups-events">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-calendar-days"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Social</span>
+                    </div>
+                    <h3>Meetups & Events</h3>
+                    <p class="group-description">Local meet-ups, retreats, travel groups, and networking events to connect with fellow mothers in person.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            1.6K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            654 posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Meetups</span>
+                        <span class="tag">Events</span>
+                        <span class="tag">Travel</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Financial Independence -->
+            <div class="group-card" data-category="career" data-members="1850" data-svg="financial-independence">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Career</span>
+                    </div>
+                    <h3>Financial Independence</h3>
+                    <p class="group-description">Money management, investment tips, side hustles, and financial planning for mothers and families.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            1.85K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            1.1K posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Finance</span>
+                        <span class="tag">Investing</span>
+                        <span class="tag">Side Hustle</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Mom Entrepreneurs -->
+            <div class="group-card" data-category="career" data-members="2100" data-svg="mom-entrepreneurs">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Career</span>
+                    </div>
+                    <h3>Mom Entrepreneurs</h3>
+                    <p class="group-description">Starting and growing your own business while managing motherhood. Share ideas, challenges, and wins.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            2.1K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            1.8K posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Business</span>
+                        <span class="tag">Entrepreneurship</span>
+                        <span class="tag">Startup</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+
+            <!-- Mental Health Support -->
+            <div class="group-card" data-category="wellness" data-members="2300" data-svg="mental-health-support">
+                <div class="group-header">
+                    <div class="group-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                <div class="group-body">
+                    <div class="group-badge-container">
+                        <span class="group-badge">Wellness</span>
+                    </div>
+                    <h3>Mental Health Support</h3>
+                    <p class="group-description">A safe space to discuss anxiety, depression, stress, and mental wellness. Support from those who understand.</p>
+                    <div class="group-stats">
+                        <span class="stat">
+                            <i class="fas fa-users"></i>
+                            2.3K members
+                        </span>
+                        <span class="stat">
+                            <i class="fas fa-comments"></i>
+                            2.5K posts
+                        </span>
+                    </div>
+                    <div class="group-tags">
+                        <span class="tag">Mental Health</span>
+                        <span class="tag">Support</span>
+                        <span class="tag">Wellness</span>
+                    </div>
+                </div>
+                <div class="group-footer">
+                    <button class="btn btn-secondary-small">Join Group</button>
+                    <button class="btn btn-outline-small">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="community-stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h4>18.5K+</h4>
+                <p>Active Members</p>
+            </div>
+            <div class="stat-item">
+                <h4>15K+</h4>
+                <p>Monthly Posts</p>
+            </div>
+            <div class="stat-item">
+                <h4>9</h4>
+                <p>Active Groups</p>
+            </div>
+            <div class="stat-item">
+                <h4>24/7</h4>
+                <p>Community Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="community-cta">
+        <h2>Ready to Find Your Community?</h2>
+        <p>Join a group that speaks to your interests and connect with mothers who understand your journey.</p>
+        <button class="btn btn-primary-large">Create Your Own Group</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>MumsMatter</h4>
+                <p>By a Mother, For All Mothers</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="community-groups.html">Community</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MumsMatter. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/community-groups.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="financeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e85d75;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#6b4c9a;stop-opacity:0.15" />
+    </linearGradient>
+    <linearGradient id="financeAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e85d75" />
+      <stop offset="100%" style="stop-color:#6b4c9a" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="200" fill="url(#financeGradient)"/>
+  
+  <!-- Piggy bank + Growth chart illustration -->
+  <g transform="translate(200, 100)">
+    <!-- Piggy bank body -->
+    <ellipse cx="-30" cy="0" rx="25" ry="20" fill="url(#financeAccent)" opacity="0.7" stroke="url(#financeAccent)" stroke-width="2"/>
+    
+    <!-- Piggy bank head -->
+    <circle cx="-10" cy="-15" r="10" fill="url(#financeAccent)" opacity="0.8" stroke="url(#financeAccent)" stroke-width="2"/>
+    
+    <!-- Snout -->
+    <circle cx="-2" cy="-12" r="4" fill="url(#financeAccent)" stroke="url(#financeAccent)" stroke-width="1.5"/>
+    
+    <!-- Ear -->
+    <ellipse cx="-5" cy="-28" rx="4" ry="6" fill="url(#financeAccent)" opacity="0.7" stroke="url(#financeAccent)" stroke-width="1.5"/>
+    
+    <!-- Coin slot on top -->
+    <rect x="-35" y="-8" width="8" height="4" rx="2" fill="url(#financeAccent)" opacity="0.5"/>
+    
+    <!-- Legs -->
+    <rect x="-40" y="18" width="5" height="15" rx="2" fill="url(#financeAccent)" opacity="0.6"/>
+    <rect x="-25" y="18" width="5" height="15" rx="2" fill="url(#financeAccent)" opacity="0.6"/>
+    
+    <!-- Growth chart -->
+    <g transform="translate(25, 5)">
+      <!-- Chart background -->
+      <rect x="-20" y="-25" width="45" height="35" rx="2" fill="url(#financeAccent)" opacity="0.1" stroke="url(#financeAccent)" stroke-width="1.5"/>
+      
+      <!-- Bars -->
+      <rect x="-12" y="0" width="6" height="8" fill="url(#financeAccent)" opacity="0.6"/>
+      <rect x="-2" y="-5" width="6" height="13" fill="url(#financeAccent)" opacity="0.8"/>
+      <rect x="8" y="-12" width="6" height="20" fill="url(#financeAccent)"/>
+      
+      <!-- Up arrow -->
+      <line x1="18" y1="8" x2="18" y2="-15" stroke="url(#financeAccent)" stroke-width="2" stroke-linecap="round"/>
+      <polygon points="18,-15 15,-8 21,-8" fill="url(#financeAccent)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="careerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e85d75;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#6b4c9a;stop-opacity:0.15" />
+    </linearGradient>
+    <linearGradient id="careerAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e85d75" />
+      <stop offset="100%" style="stop-color:#6b4c9a" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="200" fill="url(#careerGradient)"/>
+  
+  <!-- Briefcase illustration -->
+  <g transform="translate(200, 100)">
+    <!-- Briefcase body -->
+    <rect x="-60" y="-25" width="120" height="70" rx="8" fill="none" stroke="url(#careerAccent)" stroke-width="3"/>
+    
+    <!-- Briefcase handle -->
+    <path d="M -50 -25 Q -50 -55 0 -55 Q 50 -55 50 -25" fill="none" stroke="url(#careerAccent)" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Briefcase divider -->
+    <line x1="-60" y1="10" x2="60" y2="10" stroke="url(#careerAccent)" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Decorative dots -->
+    <circle cx="-30" cy="25" r="3" fill="url(#careerAccent)"/>
+    <circle cx="0" cy="25" r="3" fill="url(#careerAccent)"/>
+    <circle cx="30" cy="25" r="3" fill="url(#careerAccent)"/>
+    
+    <!-- Arrow up (growth indicator) -->
+    <g transform="translate(45, -50)">
+      <line x1="0" y1="15" x2="0" y2="0" stroke="url(#careerAccent)" stroke-width="2.5" stroke-linecap="round"/>
+      <polygon points="0,0 -4,6 4,6" fill="url(#careerAccent)"/>
+    </g>
+  </g>
+</svg>
