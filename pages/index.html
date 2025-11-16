@@ -6,15 +6,35 @@
     <title>MumsMatter - By a Mother, For All Mothers</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Tally popup config - replace formId with your Tally form id if different -->
+        <script>
+        window.TallyConfig = {
+            "formId": "1AA9gp",
+            "popup": {
+                "emoji": {
+                    "text": "👋",
+                    "animation": "heart-beat"
+                },
+                "autoClose": 2000,
+                "showOnce": true,
+                "doNotShowAfterSubmit": true,
+                "formEventsForwarding": true
+            }
+        };
+        </script>
+
+        <script async src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-heart"></i>
-                <span1>MumsMatter</span1>
-            </div>
+            <a href="#home" class="logo-link">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span1>MumsMatter</span1>
+                </div>
+            </a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -25,7 +45,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="community-groups.html">Community</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="navJoinTally" class="nav-join-link">Join Us</a></li>
             </ul>
         </div>
     </nav>
@@ -37,7 +57,8 @@
             <p class="tagline">Motherhood is beautiful. So are you.</p>
             <p class="subtitle">A community where mothers are truly heard, seen, and celebrated</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary">Join the Community</button>
+                <!-- opens Tally popup (formId set in head) -->
+                <button id="joinTally" class="btn btn-primary">Join the Community</button>
                 <button class="btn btn-secondary">Learn More</button>
             </div>
         </div>
@@ -253,5 +274,60 @@
     </footer>
 
     <script src="../js/script.js"></script>
+        <!-- Tally popup trigger: opens popup with current URL forwarded as hidden field -->
+        <script>
+        function openTallyPopup(e) {
+            if (e) e.preventDefault();
+            // formId should match window.TallyConfig.formId (or replace with literal id)
+            var formId = (window.TallyConfig && window.TallyConfig.formId) ? window.TallyConfig.formId : '1AA9gp';
+            // forward current page and query string as hidden fields
+            var hidden = {
+                originPage: window.location.pathname + window.location.search
+            };
+            // if email query param exists, forward it too
+            try {
+                var params = new URLSearchParams(window.location.search);
+                if (params.get('email')) hidden.email = params.get('email');
+            } catch (err) { /* ignore */ }
+
+            if (window.Tally && typeof Tally.openPopup === 'function') {
+                Tally.openPopup(formId, { hiddenFields: hidden });
+            } else {
+                console.warn('Tally script not ready yet — opening with a short delay');
+                // try again shortly if embed.js hasn't loaded yet
+                setTimeout(function () {
+                    if (window.Tally && typeof Tally.openPopup === 'function') {
+                        Tally.openPopup(formId, { hiddenFields: hidden });
+                    } else {
+                        // As a fallback, navigate to the public form page
+                        window.open('https://tally.so/r/' + formId, '_blank');
+                    }
+                }, 600);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hero CTA button
+            var joinBtn = document.getElementById('joinTally');
+            if (joinBtn) {
+                joinBtn.addEventListener('click', openTallyPopup);
+            }
+
+            // Nav Join Us link
+            var navJoinBtn = document.getElementById('navJoinTally');
+            if (navJoinBtn) {
+                navJoinBtn.addEventListener('click', openTallyPopup);
+            }
+
+            // Attach Tally popup to all "Join" related buttons on the page
+            var allButtons = document.querySelectorAll('button');
+            allButtons.forEach(function (btn) {
+                var text = btn.textContent.trim();
+                if (text === 'Join Free Today' || text === 'Join the Community') {
+                    btn.addEventListener('click', openTallyPopup);
+                }
+            });
+        });
+        </script>
 </body>
 </html>

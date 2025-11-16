@@ -7,15 +7,34 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/community-groups.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <!-- Tally popup config - replace formId with your Tally form id if different -->
+    <script>
+    window.TallyConfig = {
+      "formId": "1AA9gp",
+      "popup": {
+        "emoji": {
+          "text": "👋",
+          "animation": "heart-beat"
+        },
+        "autoClose": 2000,
+        "showOnce": true,
+        "doNotShowAfterSubmit": true,
+        "formEventsForwarding": true
+      }
+    };
+    </script>
+
+    <script async src="https://tally.so/widgets/embed.js"></script>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-heart"></i>
-                <span>MumsMatter</span>
-            </div>
+            <a href="index.html" class="logo-link">
+                <div class="logo">
+                    <i class="fas fa-heart"></i>
+                    <span>MumsMatter</span>
+                </div>
+            </a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -26,7 +45,7 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="community-groups.html">Community</a></li>
                 <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" id="navJoinTally" class="nav-join-link">Join Us</a></li>
             </ul>
         </div>
     </nav>
@@ -463,5 +482,46 @@
     </footer>
 
     <script src="../js/community-groups.js"></script>
+    <!-- Tally popup trigger: opens popup with current URL forwarded as hidden field -->
+    <script>
+    function openTallyPopup(e) {
+        if (e) e.preventDefault();
+        var formId = (window.TallyConfig && window.TallyConfig.formId) ? window.TallyConfig.formId : '1AA9gp';
+        var hidden = {
+            originPage: window.location.pathname + window.location.search
+        };
+        try {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('email')) hidden.email = params.get('email');
+        } catch (err) { /* ignore */ }
+
+        if (window.Tally && typeof Tally.openPopup === 'function') {
+            Tally.openPopup(formId, { hiddenFields: hidden });
+        } else {
+            setTimeout(function () {
+                if (window.Tally && typeof Tally.openPopup === 'function') {
+                    Tally.openPopup(formId, { hiddenFields: hidden });
+                } else {
+                    window.open('https://tally.so/r/' + formId, '_blank');
+                }
+            }, 600);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var navJoinBtn = document.getElementById('navJoinTally');
+        if (navJoinBtn) {
+            navJoinBtn.addEventListener('click', openTallyPopup);
+        }
+
+        // Attach Tally popup to all "Join Group" buttons
+        var joinButtons = document.querySelectorAll('button:not(#joinTally)');
+        joinButtons.forEach(function (btn) {
+            if (btn.textContent.trim() === 'Join Group' || btn.textContent.trim() === 'Join Community') {
+                btn.addEventListener('click', openTallyPopup);
+            }
+        });
+    });
+    </script>
 </body>
 </html>

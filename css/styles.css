@@ -213,10 +213,23 @@ span1 {
     font-size: 1.5rem;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -228,6 +241,24 @@ span1 {
 
 .nav-menu a:hover {
     color: var(--primary-color);
+}
+
+/* Nav Join CTA Button */
+.nav-join-link {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color)) !important;
+    color: white !important;
+    padding: 10px 24px !important;
+    border-radius: var(--border-radius);
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(232, 93, 117, 0.3);
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.nav-join-link:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(232, 93, 117, 0.4) !important;
+    color: white !important;
 }
 
 .hamburger {
