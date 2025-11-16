@@ -99,7 +99,7 @@ style.textContent = `
         overflow: hidden;
     }
 
-    span {
+    button span {
         position: absolute;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.5);
