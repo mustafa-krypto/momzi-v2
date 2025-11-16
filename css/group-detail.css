@@ -528,3 +528,85 @@
         padding: 0.3rem 0.6rem;
     }
 }
+
+/* ==================== SMALL MOBILE (384px - 480px) ==================== */
+@media (max-width: 384px) {
+    .group-hero {
+        padding: 50px calc(max(1rem, 2vw)) 40px;
+    }
+
+    .group-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .group-container {
+        padding: 20px calc(max(1rem, 2vw));
+        gap: 1.5rem;
+    }
+
+    .create-post {
+        padding: 1.2rem;
+    }
+
+    .post-card {
+        padding: 1.2rem;
+    }
+
+    .action-btn {
+        min-width: 70px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .topic-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+    .group-hero {
+        padding: 40px 1rem 30px;
+    }
+
+    .group-hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .group-container {
+        padding: 15px 1rem;
+        gap: 1rem;
+    }
+
+    .group-sidebar {
+        gap: 1rem;
+    }
+
+    .group-feed {
+        gap: 1rem;
+    }
+
+    .create-post {
+        padding: 1rem;
+    }
+
+    .post-card {
+        padding: 1rem;
+    }
+
+    .post-header {
+        margin-bottom: 0.75rem;
+    }
+
+    .action-btn {
+        min-width: 60px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .topic-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+}
