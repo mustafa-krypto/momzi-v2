@@ -485,11 +485,30 @@ span1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
     border-top: 4px solid var(--primary-color);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.group-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(232, 93, 117, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.group-card:hover::before {
+    left: 100%;
 }
 
 .group-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(232, 93, 117, 0.2);
+    border-top: 4px solid var(--accent-color);
 }
 
 .group-icon {
