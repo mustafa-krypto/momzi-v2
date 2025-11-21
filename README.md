@@ -1,8 +1,8 @@
-# MumsMatter - By a Mother, For All Mothers
+# Mumme - By a Mother, For All Mothers
 
 ## 🌸 Overview
 
-**MumsMatter** is a responsive, mobile-first web UI mockup for a community app designed to empower and support mothers. The platform creates a safe space where mothers can celebrate their identity beyond motherhood while raising their families.
+**Mumme** is a responsive, mobile-first web UI mockup for a community app designed to empower and support mothers. The platform creates a safe space where mothers can celebrate their identity beyond motherhood while raising their families.
 
 ### Mission
 *"Motherhood is beautiful. So are you."* - We believe mothers deserve to be heard, seen, and celebrated while pursuing their own dreams and passions.
@@ -295,7 +295,7 @@ This project uses:
 
 ## 📝 License
 
-This project is created as a community-focused initiative. Feel free to use and modify for the MumsMatter project.
+This project is created as a community-focused initiative. Feel free to use and modify for the Mumme project.
 
 ---
 

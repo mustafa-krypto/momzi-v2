@@ -153,4 +153,4 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-console.log('MumsMatter app loaded successfully! 🎉');
+console.log('Mumme app loaded successfully! 🎉');
